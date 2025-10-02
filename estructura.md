@@ -1,6 +1,6 @@
 ├── /assets/
 │   ├── comandos.json
-│   ├── favicon.ico
+│   ├── favicon.png
 │   ├── main.js
 │   └── styles.css
 ├── menu.php
