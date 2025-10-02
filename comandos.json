@@ -1,0 +1,991 @@
+{
+
+    "kernel": {
+        "Comandos Entorno de Red": [
+            {
+                "descripcion": "Determina la dirección IP de un \"Host\". Con -a despliega toda la info de DNS.",
+                "comando": "host [host]"
+            },
+            {
+                "descripcion": "Muestra y permite configurar una interfaz de Red. (Legado: usar 'ip')",
+                "comando": "ifconfig [interfase]"
+            },
+            {
+                "descripcion": "Habilita la interfaz de red especificada. (Legado: usar 'ip')",
+                "comando": "ifup [interfase]"
+            },
+            {
+                "descripcion": "Deshabilita la interfaz de red especificada. (Legado: usar 'ip')",
+                "comando": "ifdown [interfase]"
+            },
+            {
+                "descripcion": "Muestra todas las conexiones de Red (originadas y recibidas).",
+                "comando": "netstat -a"
+            },
+            {
+                "descripcion": "Muestra la tabla de ruteo (\"routing table\") del sistema.",
+                "comando": "netstat -r"
+            },
+            {
+                "descripcion": "Muestra estadísticas de red de cada interfaz.",
+                "comando": "netstat -i"
+            },
+            {
+                "descripcion": "Busca información en los servidores DNS.",
+                "comando": "nslookup"
+            },
+            {
+                "descripcion": "Manda paquetes de ping de 1024 bytes (el default es 512).",
+                "comando": "ping -s 1016"
+            },
+            {
+                "descripcion": "Permite agregar tablas de ruteo de y hacia el Host.",
+                "comando": "route add -net 206.171.55.16 255.255.255.240 eth0"
+            },
+            {
+                "descripcion": "Define la ruta predeterminada (Default Gateway).",
+                "comando": "route add default gw [ip] [interfase]"
+            },
+            {
+                "descripcion": "Despliega la tabla de ruteo del \"Host\" (forma numérica).",
+                "comando": "route -n"
+            },
+            {
+                "descripcion": "Funciona como un cliente FTP que simula conexiones por Samba.",
+                "comando": "smbclient"
+            },
+            {
+                "descripcion": "Permite el \"debugging\" del tráfico de una interfaz.",
+                "comando": "tcpdump"
+            },
+            {
+                "descripcion": "Verifica la validez del archivo `smb.conf` utilizado por Samba.",
+                "comando": "testparm"
+            }
+        ],
+        "Comandos para Control de Procesos": [
+            {
+                "descripcion": "Despliega todos los procesos del sistema, con nombre y tiempo de inicio.",
+                "comando": "ps -aux"
+            },
+            {
+                "descripcion": "Despliega la prioridad actual (PRI) y el número gentil (NI) de los procesos.",
+                "comando": "ps -l"
+            },
+            {
+                "descripcion": "Manda señal al proceso con ID  para que relea su configuración (HUP).",
+                "comando": "kill -HUP "
+            },
+            {
+                "descripcion": "Manda señal para que el proceso con ID  sea interrumpido (INT).",
+                "comando": "kill -INT "
+            },
+            {
+                "descripcion": "Manda señal para que el proceso con ID  termine amablemente (TERM, default).",
+                "comando": "kill -TERM "
+            },
+            {
+                "descripcion": "Manda señal al proceso con ID  para que pare momentáneamente (STOP).",
+                "comando": "kill -STOP "
+            },
+            {
+                "descripcion": "Manda señal al proceso con ID  para que continúe (CONT).",
+                "comando": "kill -CONT "
+            },
+            {
+                "descripcion": "Manda señal al proceso con ID  que termine de inmediato (KILL).",
+                "comando": "kill -KILL "
+            },
+            {
+                "descripcion": "Manda una señal al proceso por nombre (default es -TERM).",
+                "comando": "killall "
+            },
+            {
+                "descripcion": "Inicia un comando con un valor NI específico (ej. nice -10 named).",
+                "comando": "nice [+-NI] [comando]"
+            },
+            {
+                "descripcion": "Cambia el valor NI (prioridad) de un proceso por ID.",
+                "comando": "snice [+-NI] "
+            },
+            {
+                "descripcion": "Ejecuta un comando en segundo plano (background).",
+                "comando": " &"
+            },
+            {
+                "descripcion": "Monitorea dinámicamente varios recursos y procesos del sistema.",
+                "comando": "top"
+            },
+            {
+                "descripcion": "Muestra un condensado dinámico de los procesos del sistema por intervalos.",
+                "comando": "vmstat -n "
+            },
+            {
+                "descripcion": "Programa tareas para que se ejecuten a una hora específica (una sola vez).",
+                "comando": "at [hora]"
+            },
+            {
+                "descripcion": "Despliega los trabajos 'at' pendientes.",
+                "comando": "atq"
+            },
+            {
+                "descripcion": "Elimina un trabajo programado con 'at'.",
+                "comando": "atrm "
+            },
+            {
+                "descripcion": "Edita el archivo del usuario para programar tareas recurrentes (crontab).",
+                "comando": "crontab -e"
+            }
+        ],
+        "Comandos de Administración, Logs y Configuración": [
+            {
+                "descripcion": "Muestra el final de un archivo (con -f se mantiene abierto para logs).",
+                "comando": "tail -f /var/log/messages"
+            },
+            {
+                "descripcion": "Muestra las últimas 15 líneas de un archivo (útil para logs).",
+                "comando": "tail -f --line 15 /var/log/messages"
+            },
+            {
+                "descripcion": "Ejecutable para configurar el sonido del sistema (Legado).",
+                "comando": "/usr/sbin/sndconfig"
+            },
+            {
+                "descripcion": "Ejecutable para configuración de Interfaces de Red (Legado).",
+                "comando": "/bin/netconf"
+            },
+            {
+                "descripcion": "Configura los parámetros del kernel en tiempo de ejecución.",
+                "comando": "sysctl -a"
+            },
+            {
+                "descripcion": "Muestra los límites del sistema (max. ficheros abiertos, etc.).",
+                "comando": "ulimit"
+            },
+            {
+                "descripcion": "Añade un nuevo usuario de sistema (ej. adduser pepe).",
+                "comando": "adduser [usuario]"
+            },
+            {
+                "descripcion": "Elimina un usuario de sistema.",
+                "comando": "userdel [usuario]"
+            },
+            {
+                "descripcion": "Modifica un usuario de sistema (ej. cambiar shell).",
+                "comando": "usermod -s /bin/bash [usuario]"
+            },
+            {
+                "descripcion": "Muestra el espacio en disco disponible (con -h para formato legible).",
+                "comando": "df -h"
+            },
+            {
+                "descripcion": "Muestra el camino que se necesita para llegar a un host remoto.",
+                "comando": "traceroute [host]"
+            },
+            {
+                "descripcion": "Muestra el espacio que está ocupado por directorios (con -sH para resumen legible).",
+                "comando": "du -sH [directorio]"
+            },
+            {
+                "descripcion": "Muestra los ficheros/conexiones que utiliza cada proceso.",
+                "comando": "lsof -i"
+            },
+            {
+                "descripcion": "Trata de instalar un módulo de kernel.",
+                "comando": "modprobe [modulo]"
+            },
+            {
+                "descripcion": "Elimina módulos del kernel que están cargados.",
+                "comando": "rmmod [modulo]"
+            }
+        ],
+        "Comandos de Archivos y Utilidades (Otros)": [
+            {
+                "descripcion": "Lista el contenido de directorios (con -l para detalles).",
+                "comando": "ls -l"
+            },
+            {
+                "descripcion": "Copia ficheros o directorios (con -r para recursivo).",
+                "comando": "cp -rfp [origen] [destino]"
+            },
+            {
+                "descripcion": "Borra ficheros o directorios (con -r para recursivo y -f para forzar).",
+                "comando": "rm -rf [directorio]"
+            },
+            {
+                "descripcion": "Crea directorios.",
+                "comando": "mkdir [directorio]"
+            },
+            {
+                "descripcion": "Borra directorios (deben estar vacíos).",
+                "comando": "rmdir [directorio]"
+            },
+            {
+                "descripcion": "Renombra o mueve ficheros/directorios.",
+                "comando": "mv [origen] [destino]"
+            },
+            {
+                "descripcion": "Muestra y permite establecer la fecha de sistema.",
+                "comando": "date"
+            },
+            {
+                "descripcion": "Muestra el historial de comandos introducidos por el usuario.",
+                "comando": "history | more"
+            },
+            {
+                "descripcion": "Muestra el contenido de un fichero con pausas cada 25 líneas.",
+                "comando": "more [fichero]"
+            },
+            {
+                "descripcion": "Filtra el contenido de un fichero buscando una cadena.",
+                "comando": "cat [fichero] | grep [cadena]"
+            },
+            {
+                "descripcion": "Muestra todo el contenido de un fichero sin pausa.",
+                "comando": "cat [fichero]"
+            },
+            {
+                "descripcion": "Cambia los permisos de lectura/escritura/ejecución.",
+                "comando": "chmod +rw [fichero]"
+            },
+            {
+                "descripcion": "Cambia el dueño y el grupo de ficheros/directorios.",
+                "comando": "chown root:root [fichero]"
+            },
+            {
+                "descripcion": "Archivador de ficheros (con zcvf para comprimir/archivar).",
+                "comando": "tar zcvf fichero.tgz [directorio]"
+            },
+            {
+                "descripcion": "Descompresor compatible con ZIP/gzip.",
+                "comando": "gunzip [fichero]"
+            },
+            {
+                "descripcion": "Gestor de paquetes de Red Hat para instalar o actualizar software.",
+                "comando": "rpm -i paquete.rpm"
+            },
+            {
+                "descripcion": "Programa para descargar ficheros por http o ftp.",
+                "comando": "wget [url]"
+            },
+            {
+                "descripcion": "Navegador web de consola con opciones de ftp y https.",
+                "comando": "lynx [url]"
+            },
+            {
+                "descripcion": "Cliente FTP para transferencias.",
+                "comando": "ftp [host]"
+            },
+            {
+                "descripcion": "Muestra la información Whois de dominios.",
+                "comando": "whois [dominio]"
+            },
+            {
+                "descripcion": "Muestra los usuarios de sistema que han iniciado una sesión.",
+                "comando": "who"
+            },
+            {
+                "descripcion": "Envío y lectura de correo electrónico.",
+                "comando": "mail pepe@host < fichero"
+            },
+            {
+                "descripcion": "Ordena el contenido de un fichero.",
+                "comando": "cat [fichero] | sort"
+            },
+            {
+                "descripcion": "Crea enlaces (accesos directos).",
+                "comando": "ln -s /directorio [enlace]"
+            },
+            {
+                "descripcion": "Muestra la cabecera (10 líneas) de un fichero.",
+                "comando": "head [fichero]"
+            },
+            {
+                "descripcion": "Dice de qué tipo es un fichero.",
+                "comando": "file [fichero]"
+            }
+        ]
+    },
+        "sistema": [
+            {
+                "descripcion": "Muestra la ruta completa del directorio actual.",
+                "comando": "pwd"
+            },
+            {
+                "descripcion": "Lista los archivos y carpetas en el directorio actual.",
+                "comando": "ls"
+            },
+            {
+                "descripcion": "Cambia el directorio de trabajo al especificado.",
+                "comando": "cd [directorio]"
+            },
+            {
+                "descripcion": "Crea un nuevo directorio con el nombre dado.",
+                "comando": "mkdir [nombre_directorio]"
+            },
+            {
+                "descripcion": "Elimina un directorio vacío.",
+                "comando": "rmdir [directorio_vacío]"
+            },
+            {
+                "descripcion": "Crea un archivo vacío con el nombre especificado.",
+                "comando": "touch [archivo]"
+            },
+            {
+                "descripcion": "Elimina un archivo. Si el archivo está protegido, se pedirá confirmación.",
+                "comando": "rm [archivo]"
+            },
+            {
+                "descripcion": "Elimina un directorio y su contenido de manera recursiva.",
+                "comando": "rm -r [directorio]"
+            },
+            {
+                "descripcion": "Copia archivos o directorios desde la ubicación de origen a la ubicación de destino.",
+                "comando": "cp [origen] [destino]"
+            },
+            {
+                "descripcion": "Mueve archivos o directorios desde el origen al destino (puede usarse también para renombrar).",
+                "comando": "mv [origen] [destino]"
+            },
+            {
+                "descripcion": "Muestra el contenido de un archivo en la terminal.",
+                "comando": "cat [archivo]"
+            },
+            {
+                "descripcion": "Abre un editor de texto básico en la terminal para editar un archivo.",
+                "comando": "nano [archivo]"
+            },
+            {
+                "descripcion": "Muestra el contenido de un archivo de texto una página a la vez.",
+                "comando": "more [archivo]"
+            },
+            {
+                "descripcion": "Similar a more, pero permite navegar hacia atrás en el archivo.",
+                "comando": "less [archivo]"
+            },
+            {
+                "descripcion": "Muestra las primeras líneas de un archivo.",
+                "comando": "head [archivo]"
+            },
+            {
+                "descripcion": "Muestra las últimas líneas de un archivo.",
+                "comando": "tail [archivo]"
+            },
+            {
+                "descripcion": "Busca un texto específico dentro de un archivo.",
+                "comando": "grep [texto] [archivo]"
+            },
+            {
+                "descripcion": "Busca un archivo o directorio dentro de una ruta específica.",
+                "comando": "find [ruta] -name [nombre]"
+            },
+            {
+                "descripcion": "Actualiza la lista de paquetes disponibles.",
+                "comando": "sudo apt update"
+            },
+            {
+                "descripcion": "Actualiza los paquetes instalados a su versión más reciente.",
+                "comando": "sudo apt upgrade"
+            },
+            {
+                "descripcion": "Instala un paquete específico (por ejemplo, sudo apt install vim).",
+                "comando": "sudo apt install [paquete]"
+            },
+            {
+                "descripcion": "Elimina un paquete instalado.",
+                "comando": "sudo apt remove [paquete]"
+            },
+            {
+                "descripcion": "Elimina paquetes que ya no son necesarios o dependencias no utilizadas.",
+                "comando": "sudo apt autoremove"
+            },
+            {
+                "descripcion": "Instala un paquete usando Homebrew (en macOS).",
+                "comando": "brew install [paquete]"
+            },
+            {
+                "descripcion": "Muestra una lista detallada de todos los procesos que se están ejecutando.",
+                "comando": "ps aux"
+            },
+            {
+                "descripcion": "Muestra los procesos activos y el uso de recursos en tiempo real del sistema.",
+                "comando": "top"
+            },
+            {
+                "descripcion": "Similar a top, pero con una interfaz más amigable y mejor visualización (requiere instalación).",
+                "comando": "htop"
+            },
+            {
+                "descripcion": "Mata un proceso en ejecución especificando su ID de proceso (PID).",
+                "comando": "kill [PID]"
+            },
+            {
+                "descripcion": "Mata un proceso por su nombre.",
+                "comando": "pkill [nombre_del_proceso]"
+            },
+            {
+                "descripcion": "Inicializa un nuevo repositorio de Git en el directorio actual.",
+                "comando": "git init"
+            },
+            {
+                "descripcion": "Clona un repositorio remoto en tu máquina local.",
+                "comando": "git clone [url]"
+            },
+            {
+                "descripcion": "Muestra el estado actual del repositorio (archivos modificados, no rastreados, etc.).",
+                "comando": "git status"
+            },
+            {
+                "descripcion": "Añade un archivo a la zona de preparación (staging area) para el siguiente commit.",
+                "comando": "git add [archivo]"
+            },
+            {
+                "descripcion": "Realiza un commit con el mensaje que describes.",
+                "comando": "git commit -m \"[mensaje]\""
+            },
+            {
+                "descripcion": "Envía tus cambios locales a un repositorio remoto (por ejemplo, a GitHub).",
+                "comando": "git push"
+            },
+            {
+                "descripcion": "Trae los cambios más recientes de un repositorio remoto a tu repositorio local.",
+                "comando": "git pull"
+            },
+            {
+                "descripcion": "Busca archivos en el sistema usando una base de datos indexada.",
+                "comando": "locate [archivo]"
+            },
+            {
+                "descripcion": "Busca archivos o directorios dentro de un directorio específico.",
+                "comando": "find [directorio] -name [nombre]"
+            },
+            {
+                "descripcion": "Busca un texto específico dentro de un archivo.",
+                "comando": "grep [texto] [archivo]"
+            },
+            {
+                "descripcion": "Muestra el uso del espacio en disco de todos los sistemas de archivos montados.",
+                "comando": "df"
+            },
+            {
+                "descripcion": "Muestra el uso de espacio de un directorio o archivo.",
+                "comando": "du [directorio]"
+            },
+            {
+                "descripcion": "Muestra la memoria libre en tu sistema.",
+                "comando": "free -m"
+            },
+            {
+                "descripcion": "Muestra el tiempo que el sistema ha estado en funcionamiento.",
+                "comando": "uptime"
+            },
+            {
+                "descripcion": "Crea un archivo comprimido en formato .tar.",
+                "comando": "tar -cvf archivo.tar [directorio]"
+            },
+            {
+                "descripcion": "Extrae un archivo comprimido .tar.",
+                "comando": "tar -xvf archivo.tar"
+            },
+            {
+                "descripcion": "Comprime un archivo utilizando el formato .gz.",
+                "comando": "gzip [archivo]"
+            },
+            {
+                "descripcion": "Descomprime un archivo .gz.",
+                "comando": "gunzip [archivo.gz]"
+            },
+            {
+                "descripcion": "Cambia los permisos de un archivo o directorio. (Ej. chmod 755 archivo para dar permisos de lectura, escritura y ejecución)",
+                "comando": "chmod [opciones] [archivo]"
+            },
+            {
+                "descripcion": "Cambia el propietario de un archivo o directorio.",
+                "comando": "chown [usuario] [archivo]"
+            },
+            {
+                "descripcion": "Cambia el grupo de un archivo o directorio.",
+                "comando": "chgrp [grupo] [archivo]"
+            },
+            {
+                "descripcion": "Muestra la configuración de la interfaz de red en tu máquina.",
+                "comando": "ifconfig"
+            },
+            {
+                "descripcion": "Envía paquetes ICMP a una dirección IP para comprobar la conectividad.",
+                "comando": "ping [dirección]"
+            },
+            {
+                "descripcion": "Muestra la ruta que siguen los paquetes para llegar a una dirección en particular.",
+                "comando": "traceroute [dirección]"
+            },
+            {
+                "descripcion": "Muestra el estado de las conexiones de red y otros detalles de la red.",
+                "comando": "netstat"
+            },
+            {
+                "descripcion": "Realiza una solicitud HTTP a una URL y muestra el resultado (muy útil para probar APIs).",
+                "comando": "curl [url]"
+            },
+            {
+                "descripcion": "Reinicia el sistema de inmediato.",
+                "comando": "sudo reboot"
+            },
+            {
+                "descripcion": "Apaga el sistema de inmediato.",
+                "comando": "sudo shutdown -h now"
+            },
+            {
+                "descripcion": "Reinicia el sistema inmediatamente.",
+                "comando": "sudo shutdown -r now"
+            }
+        ],
+        
+       
+    "otros": [
+        {
+            "descripcion": "Info valiosa sobre nuestro SO",
+            "comando": "cat etc/os-release"
+        },
+        {
+            "descripcion": "Detiene el servicio MariaDB",
+            "comando": "sudo systemctl stop mariadb"
+        },
+        {
+            "descripcion": "Renombra archivos como 512.png → 512x512.png. Útil para generar assets de apps.",
+            "comando": "for f in *.png; do name=\"${f%.png}\"; if [[ \"$name\" =~ ^[0-9]+$ ]]; then mv \"$f\" \"${name}x${name}.png\"; fi; done"
+        },
+        {
+            "descripcion": "Encuentra archivos mayores a 100 MB. Ideal para liberar espacio en disco.",
+            "comando": "find /home -type f -size +100M -exec ls -lh {} \\;"
+        },
+        {
+            "descripcion": "Muestra qué proceso usa el puerto 80 (o cualquier otro). Alternativa moderna a netstat.",
+            "comando": "sudo ss -tulnp | grep :80"
+        },
+        {
+            "descripcion": "Reemplaza todas las ocurrencias de \"antiguo\" por \"nuevo\" en todos los .txt.",
+            "comando": "sed -i 's/antiguo/nuevo/g' *.txt"
+        },
+        {
+            "descripcion": "Asigna permisos de lectura/ejecución a todos los archivos y carpetas dentro de mi_carpeta.",
+            "comando": "chmod -R 755 ./mi_carpeta"
+        },
+        {
+            "descripcion": "Borra el historial actual y lo guarda vacío. Útil en entornos compartidos.",
+            "comando": "history -c && history -w"
+        },
+        {
+            "descripcion": "Comprime una carpeta en un archivo .tar.gz listo para respaldar o transferir.",
+            "comando": "tar -czvf backup.tar.gz carpeta/"
+        },
+        {
+            "descripcion": "Termina todos los procesos que contengan \"nombre_proceso\" en su comando.",
+            "comando": "pkill -f \"nombre_proceso\""
+        },
+        {
+            "descripcion": "Muestra el uso de disco en formato humano (KB, MB, GB). Esencial para monitoreo rápido.",
+            "comando": "df -h"
+        },
+        {
+            "descripcion": "Busca la palabra \"error\" recursivamente en todos los archivos de /var/log/.",
+            "comando": "grep -r \"error\" /var/log/"
+        },
+        {
+            "descripcion": "Cambia el dueño de una carpeta y su contenido al usuario actual. Útil tras usar sudo.",
+            "comando": "sudo chown -R $USER:$USER ./proyecto/"
+        },
+        {
+            "descripcion": "Descarga un sitio web para verlo offline. Útil para documentación o recursos educativos.",
+            "comando": "wget -r -p -np -k https://ejemplo.com"
+        }
+    ],
+        
+        
+        "maria": [
+            {
+                "descripcion": "Inicia el servicio MariaDB",
+                "comando": "sudo systemctl start mariadb"
+            },
+            {
+                "descripcion": "Detiene el servicio MariaDB",
+                "comando": "sudo systemctl stop mariadb"
+            },
+            {
+                "descripcion": "Reinicia MariaDB",
+                "comando": "sudo systemctl restart mariadb"
+            },
+            {
+                "descripcion": "Verifica estado del servicio",
+                "comando": "sudo systemctl status mariadb"
+            },
+            {
+                "descripcion": "Acceso con autenticación (recomendado)",
+                "comando": "sudo mysql -u root -p"
+            },
+            {
+                "descripcion": "Acceso como root sin contraseña (si configurado)",
+                "comando": "sudo mysql"
+            },
+            {
+                "descripcion": "Lista todas las bases de datos",
+                "comando": "SHOW DATABASES;"
+            },
+            {
+                "descripcion": "Crea nueva base de datos",
+                "comando": "CREATE DATABASE nombre_db;"
+            },
+            {
+                "descripcion": "Selecciona una base de datos",
+                "comando": "USE nombre_db;"
+            },
+            {
+                "descripcion": "Elimina una base de datos",
+                "comando": "DROP DATABASE nombre_db;"
+            },
+            {
+                "descripcion": "Muestra tablas de la BD actual",
+                "comando": "SHOW TABLES;"
+            },
+            {
+                "descripcion": "Describe estructura de una tabla",
+                "comando": "DESCRIBE nombre_tabla;"
+            },
+            {
+                "descripcion": "Crea nueva tabla",
+                "comando": "CREATE TABLE tabla (…) ENGINE=InnoDB;"
+            },
+            {
+                "descripcion": "Modifica estructura de tabla",
+                "comando": "ALTER TABLE tabla …;"
+            },
+            {
+                "descripcion": "Elimina una tabla",
+                "comando": "DROP TABLE tabla;"
+            },
+            {
+                "descripcion": "Inserta datos en tabla",
+                "comando": "INSERT INTO tabla (…) VALUES (…);"
+            },
+            {
+                "descripcion": "Consulta todos los registros",
+                "comando": "SELECT * FROM tabla;"
+            },
+            {
+                "descripcion": "Actualiza registros",
+                "comando": "UPDATE tabla SET campo=valor WHERE …;"
+            },
+            {
+                "descripcion": "Elimina registros",
+                "comando": "DELETE FROM tabla WHERE …;"
+            },
+            {
+                "descripcion": "Crea nuevo usuario",
+                "comando": "CREATE USER 'user'@'host' IDENTIFIED BY 'pass';"
+            },
+            {
+                "descripcion": "Elimina usuario",
+                "comando": "DROP USER 'user'@'host';"
+            },
+            {
+                "descripcion": "Otorga todos los permisos",
+                "comando": "GRANT ALL PRIVILEGES ON db.* TO 'user'@'host';"
+            },
+            {
+                "descripcion": "Revoca permisos",
+                "comando": "REVOKE ALL PRIVILEGES ON db.* FROM 'user'@'host';"
+            },
+            {
+                "descripcion": "Recarga permisos después de cambios",
+                "comando": "FLUSH PRIVILEGES;"
+            },
+            {
+                "descripcion": "Muestra permisos de usuario",
+                "comando": "SHOW GRANTS FOR 'user'@'host';"
+            },
+            {
+                "descripcion": "Cambia contraseña",
+                "comando": "SET PASSWORD FOR 'user'@'host' = PASSWORD('newpass');"
+            },
+            {
+                "descripcion": "Exporta base de datos a archivo",
+                "comando": "mysqldump -u user -p db_name > backup.sql"
+            },
+            {
+                "descripcion": "Importa base de datos desde archivo",
+                "comando": "mysql -u user -p db_name < backup.sql"
+            },
+            {
+                "descripcion": "Muestra conexiones activas",
+                "comando": "SHOW PROCESSLIST;"
+            },
+            {
+                "descripcion": "Termina una conexión específica",
+                "comando": "KILL ID_conexion;"
+            },
+            {
+                "descripcion": "Lista todos los usuarios",
+                "comando": "SELECT user, host FROM mysql.user;"
+            },
+            {
+                "descripcion": "Muestra versión de MariaDB",
+                "comando": "SHOW VARIABLES LIKE '%version%';"
+            },
+            {
+                "descripcion": "Ejecuta script SQL desde consola",
+                "comando": "SOURCE /ruta/script.sql;"
+            },
+            {
+                "descripcion": "Muestra índices de tabla",
+                "comando": "SHOW INDEX FROM tabla;"
+            },
+            {
+                "descripcion": "Actualiza estadísticas de tabla",
+                "comando": "ANALYZE TABLE tabla;"
+            },
+            {
+                "descripcion": "Verifica integridad de tabla",
+                "comando": "CHECK TABLE tabla;"
+            },
+            {
+                "descripcion": "Repara tabla corrupta",
+                "comando": "REPAIR TABLE tabla;"
+            },
+            {
+                "descripcion": "Ejecuta asistente de seguridad",
+                "comando": "sudo mysql_secure_installation"
+            },
+            {
+                "descripcion": "Edita configuración principal",
+                "comando": "sudo nano /etc/mysql/my.cnf"
+            },
+            {
+                "descripcion": "Monitoriza errores en tiempo real",
+                "comando": "sudo tail -f /var/log/mysql/error.log"
+            }
+        ],
+        "redes": [
+            {
+                "descripcion": "Mostrar la configuración de una interfaz de red Ethernet.",
+                "comando": "ifconfig eth0"
+            },
+            {
+                "descripcion": "Activar la interfaz eth0.",
+                "comando": "ifup eth0"
+            },
+            {
+                "descripcion": "Deshabilitar la interfaz eth0.",
+                "comando": "ifdown eth0"
+            },
+            {
+                "descripcion": "Configurar una dirección IP.",
+                "comando": "ifconfig eth0 192.168.1.1 netmask 255.255.255.0"
+            },
+            {
+                "descripcion": "Configurar eth0 en modo promiscuo para obtener los paquetes (sniffing).",
+                "comando": "ifconfig eth0 promisc"
+            },
+            {
+                "descripcion": "Activar la interfaz eth0 en modo DHCP.",
+                "comando": "dhclient eth0"
+            },
+            {
+                "descripcion": "Mostrar tabla de rutas.",
+                "comando": "route -n"
+            },
+            {
+                "descripcion": "Configurar entrada predeterminada.",
+                "comando": "route add -net 0/0 gw IP_Gateway"
+            },
+            {
+                "descripcion": "Conocer la puerta de enlace predeterminada.",
+                "comando": "ip route show | grep default | awk {'print $3'}"
+            },
+            {
+                "descripcion": "Configurar ruta estática para buscar la red 192.168.0.0/16.",
+                "comando": "route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1"
+            },
+            {
+                "descripcion": "Eliminar la ruta estática.",
+                "comando": "route del 0/0 gw IP_gateway"
+            },
+            {
+                "descripcion": "Activar el redireccionamiento de paquetes IP.",
+                "comando": "echo 1 > /proc/sys/net/ipv4/ip_forward"
+            },
+            {
+                "descripcion": "Mostrar el nombre del host del sistema.",
+                "comando": "hostname"
+            },
+            {
+                "descripcion": "Buscar el nombre del host para resolver el nombre a una dirección IP (1).",
+                "comando": "host www.example.com"
+            },
+            {
+                "descripcion": "Buscar el nombre del host para resolver el nombre a una dirección IP y viceversa (2).",
+                "comando": "nslookup www.example.com"
+            },
+            {
+                "descripcion": "Mostrar el estado de enlace de todas las interfaces.",
+                "comando": "ip link show"
+            },
+            {
+                "descripcion": "Mostrar el estado de enlace de eth0.",
+                "comando": "mii-tool eth0"
+            },
+            {
+                "descripcion": "Mostrar las estadísticas de la interfaz de red eth0.",
+                "comando": "ethtool eth0"
+            },
+            {
+                "descripcion": "Mostrar todas las conexiones de red activas y sus PID.",
+                "comando": "netstat -tup"
+            },
+            {
+                "descripcion": "Mostrar todos los servicios de escucha de red en el sistema y sus PID.",
+                "comando": "netstat -tupl"
+            },
+            {
+                "descripcion": "Mostrar todas las conexiones activas por dirección IP y puerto.",
+                "comando": "netstat -punta"
+            },
+            {
+                "descripcion": "Mostrar todo el tráfico HTTP.",
+                "comando": "tcpdump tcp port 80"
+            },
+            {
+                "descripcion": "Mostrar las redes inalámbricas.",
+                "comando": "iwlist scan"
+            },
+            {
+                "descripcion": "Mostrar la configuración de una interfaz de red inalámbrica.",
+                "comando": "iwconfig eth1"
+            },
+            {
+                "descripcion": "Buscar en base de datos Whois.",
+                "comando": "whois www.example.com"
+            },
+            {
+                "descripcion": "Mostrar en tiempo real las conexiones abiertas en eth0 y su tasa de transferencia.",
+                "comando": "iftop -nNP -i eth0"
+            },
+            {
+                "descripcion": "Mostrar información sobre las conexiones abiertas.",
+                "comando": "sockstat"
+            },
+            {
+                "descripcion": "Descubrir en la red las direcciones IP y MAC.",
+                "comando": "arp-scan -l"
+            },
+            {
+                "descripcion": "Mostrar configuración de red (en caso de usar Network Manager).",
+                "comando": "nm-tool"
+            }
+        ],
+        "raros": [
+            {
+                "descripcion": "Renombra archivos como 512.png → 512x512.png. Útil para generar assets de apps.",
+                "comando": "for f in *.png; do name=\"${f%.png}\"; if [[ \"$name\" =~ ^[0-9]+$ ]]; then mv \"$f\" \"${name}x${name}.png\"; fi; done"
+            },
+            {
+                "descripcion": "Encuentra archivos mayores a 100 MB. Ideal para liberar espacio en disco.",
+                "comando": "find /home -type f -size +100M -exec ls -lh {} \\;"
+            },
+            {
+                "descripcion": "Muestra qué proceso usa el puerto 80 (o cualquier otro). Alternativa moderna a netstat.",
+                "comando": "sudo ss -tulnp | grep :80"
+            },
+            {
+                "descripcion": "Reemplaza todas las ocurrencias de \"antiguo\" por \"nuevo\" en todos los .txt.",
+                "comando": "sed -i 's/antiguo/nuevo/g' *.txt"
+            },
+            {
+                "descripcion": "Asigna permisos de lectura/ejecución a todos los archivos y carpetas dentro de mi_carpeta.",
+                "comando": "chmod -R 755 ./mi_carpeta"
+            },
+            {
+                "descripcion": "Borra el historial actual y lo guarda vacío. Útil en entornos compartidos.",
+                "comando": "history -c && history -w"
+            },
+            {
+                "descripcion": "Comprime una carpeta en un archivo .tar.gz listo para respaldar o transferir.",
+                "comando": "tar -czvf backup.tar.gz carpeta/"
+            },
+            {
+                "descripcion": "Termina todos los procesos que contengan \"nombre_proceso\" en su comando.",
+                "comando": "pkill -f \"nombre_proceso\""
+            },
+            {
+                "descripcion": "Muestra el uso de disco en formato humano (KB, MB, GB). Esencial para monitoreo rápido.",
+                "comando": "df -h"
+            },
+            {
+                "descripcion": "Busca la palabra \"error\" recursivamente en todos los archivos de /var/log/.",
+                "comando": "grep -r \"error\" /var/log/"
+            },
+            {
+                "descripcion": "Cambia el dueño de una carpeta y su contenido al usuario actual. Útil tras usar sudo.",
+                "comando": "sudo chown -R $USER:$USER ./proyecto/"
+            },
+            {
+                "descripcion": "Descarga un sitio web para verlo offline. Útil para documentación o recursos educativos.",
+                "comando": "wget -r -p -np -k https://ejemplo.com"
+            },
+            {
+                "descripcion": "Lista archivos modificados en la última hora.",
+                "comando": "find . -type f -mmin -60"
+            },
+            {
+                "descripcion": "Cambia la fecha de modificación de un archivo.",
+                "comando": "touch -t 202309290800 archivo.txt"
+            },
+            {
+                "descripcion": "Ve el uso de inodos en el sistema.",
+                "comando": "df -i"
+            },
+            {
+                "descripcion": "Mata un proceso por su nombre sin usar el PID.",
+                "comando": "pkill -f \"nombre_del_proceso\""
+            },
+            {
+                "descripcion": "Ve los archivos que ocupan más espacio en una carpeta.",
+                "comando": "du -ah . | sort -rh | head -n 10"
+            },
+            {
+                "descripcion": "Ve los procesos que más consumen CPU.",
+                "comando": "top -o %CPU"
+            },
+            {
+                "descripcion": "Elimina archivos no accedidos en más de 30 días.",
+                "comando": "find /ruta/a/la/carpeta -type f -atime +30 -exec rm -f {} \\;"
+            },
+            {
+                "descripcion": "Busca un archivo por nombre sin importar mayúsculas/minúsculas.",
+                "comando": "find /ruta/a/la/carpeta -iname \"nombre_de_archivo\""
+            },
+            {
+                "descripcion": "Ve las conexiones activas y los puertos abiertos.",
+                "comando": "ss -tuln"
+            },
+            {
+                "descripcion": "Muestra el historial de comandos con fechas.",
+                "comando": "HISTTIMEFORMAT=\"%F %T \" history"
+            },
+            {
+                "descripcion": "Cambia el grupo y propietario de archivos recursivamente.",
+                "comando": "sudo chown -R usuario:grupo /ruta/a/carpeta"
+            },
+            {
+                "descripcion": "Comprime archivos y directorios en formato .tar.gz.",
+                "comando": "tar -czvf archivo_comprimido.tar.gz /ruta/a/carpeta"
+            },
+            {
+                "descripcion": "Descomprime archivos .tar.gz.",
+                "comando": "tar -xzvf archivo_comprimido.tar.gz"
+            },
+            {
+                "descripcion": "Ve la carga del sistema en tiempo real.",
+                "comando": "htop"
+            }
+        ]
+    }
